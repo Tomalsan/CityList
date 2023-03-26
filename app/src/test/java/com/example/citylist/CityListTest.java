@@ -40,6 +40,10 @@ public class CityListTest {
             cityList.add(city);
         });
     }
+
+    /**
+     * This checks if the Count() method returns the count of the cities correctly
+     */
     @Test
     public  void testCount(){
         CityList cityList = new CityList();
@@ -52,6 +56,9 @@ public class CityListTest {
 
     }
 
+    /**
+     * This checks if the delete method works properly or not
+     */
     @Test
     public void testdelete()
     {
@@ -64,6 +71,10 @@ public class CityListTest {
         assertEquals(1,cityList.Count());
 
     }
+
+    /**
+     * This checks if trying to delete a city from the list throws proper exception or not
+     */
     @Test
     public void testdeleteexception(){
         CityList cityList=new CityList();
@@ -75,6 +86,10 @@ public class CityListTest {
         });
 
     }
+
+    /**
+     * This checks Sort() returns a properly sorted list based on the parameter
+     */
     @Test
     public void testsort() {
         CityList cityList=new CityList();
@@ -95,9 +110,6 @@ public class CityListTest {
         assertEquals("Oxygen",provinceorder.get(0).getCityName());
         assertEquals("Gulisthan",provinceorder.get(1).getCityName());
         assertEquals("Jessore",provinceorder.get(2).getCityName());
-
-
-
 
     }
 

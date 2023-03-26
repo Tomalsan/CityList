@@ -24,16 +24,22 @@ public class CityList {
     }
 
     /**
-     * This returns a sorted list of cities
-     * @return
-     *      Return the sorted list of cities
+     * This deletes a given city or throws an exception if the city doesn't exist
+     * @param city
      */
+   
     public void delete(City city) {
         if (!cities.contains(city)) {
             throw new IllegalArgumentException();
         }
         cities.remove(city);
     }
+
+    /**
+     * This returns the total count of cities added in the list
+     * @return
+     *        Return the count of cities in the list
+     */
    public int Count()
    {
        return cities.size();
@@ -44,6 +50,12 @@ public class CityList {
             return o1.getProvinceName().compareTo(o2.getProvinceName());
         }
     }
+    /**
+     * This returns a sorted list of cities based on parameter
+     * @param sel
+     * @return
+     *      Return the sorted list of cities
+     */
     public List<City> getCities(int sel) {
         List<City> cityList = cities;
         if(sel==0)
